@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  paper:
+    build: .
+    restart: always
+    container_name: paper
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./data/paper:/paper/
+    ports:
+      - 25565:25565
+      - 8123:8123
